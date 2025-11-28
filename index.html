@@ -13,17 +13,17 @@ body {
     padding: 20px;
 }
 
-/* Header Desktop */
+/* Header */
 header {
     display: flex;
-    align-items: center;          /* โลโก้และหัวข้ออยู่ระดับเดียวกัน */
+    align-items: center;          /* โลโก้และหัวข้ออยู่แนวนอนเดียวกัน */
     justify-content: center;      /* อยู่กลางหน้าจอ */
     margin-bottom: 25px;
 }
 
 header img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     margin-right: 15px;
 }
@@ -68,12 +68,6 @@ header h1 .mobile-break {
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     margin-right: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.staff-card img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
 .staff-info {
@@ -102,30 +96,14 @@ header h1 .mobile-break {
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 14px;
-    transition: background 0.2s, transform 0.2s;
 }
 
 a.btn:hover {
     background: #094080;
-    transform: scale(1.05);
 }
 
 /* Media Query สำหรับมือถือ */
 @media (max-width: 480px) {
-    header {
-        justify-content: flex-start; /* โลโก้อยู่ซ้ายสุด */
-        width: 100%;
-        padding: 0 10px;
-    }
-    header img {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
-    }
-    header h1 {
-        font-size: 20px;
-        line-height: 1.2;
-    }
     header h1 .mobile-break {
         display: block; /* ขึ้นบรรทัดใหม่เฉพาะมือถือ */
     }
