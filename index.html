@@ -6,128 +6,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    body {
-        font-family: "Prompt", sans-serif;
-        background: #f2f5f8;
-        margin: 0;
-        padding: 20px;
-    }
+body {
+    font-family: "Prompt", sans-serif;
+    background: #f2f5f8;
+    margin: 0;
+    padding: 20px;
+}
 
+/* Header */
+header {
+    display: flex;
+    align-items: center; /* อยู่ระดับเดียวกัน */
+    margin-bottom: 25px;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* ไม่โดนตัด */
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #0b3d91;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* การ์ดเจ้าหน้าที่ */
+.staff-card {
+    background: #fff;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: transform 0.2s;
+}
+
+.staff-card:hover {
+    transform: translateY(-3px);
+}
+
+.staff-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* ครอบวงกลมเต็ม แต่ไม่ตัดหัวมาก */
+    padding: 5px; /* ให้มีพื้นที่รอบวงกลม */
+    margin-right: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.staff-card img:hover {
+    transform: scale(1.05);
+}
+
+.staff-info {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b3d91;
+    margin: 0 0 5px 0;
+}
+
+.role {
+    font-size: 15px;
+    color: #555;
+    margin: 0 0 8px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #0b3d91;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+a.btn:hover {
+    background: #094080;
+}
+
+/* Media Query สำหรับมือถือ */
+@media (max-width: 480px) {
     header {
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        text-align: center;
     }
-
     header img {
-        width: 60px;
-        height: 60px;
-        margin-right: 15px;
-        object-fit: contain;
+        margin: 0 0 10px 0;
+        width: 80px;
+        height: 80px;
     }
-
     header h1 {
-        font-size: 26px;
-        color: #0b3d91;
-        margin: 0;
-        line-height: 1.2;
-        font-weight: 700;
+        font-size: 22px;
     }
 
     .staff-card {
-        background: #fff;
-        padding: 20px;
-        margin: 15px auto;
-        max-width: 500px;
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        transition: transform 0.2s;
-    }
-    .staff-card:hover {
-        transform: translateY(-3px);
+        text-align: center;
+        padding: 20px 15px;
     }
     .staff-card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 20px;
-        flex-shrink: 0;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        transition: transform 0.2s;
-    }
-    .staff-card img:hover {
-        transform: scale(1.05);
-    }
-    .staff-info {
-        flex: 1 1 auto;
-        min-width: 0;
+        width: 120px;
+        height: 120px;
+        margin: 0 0 15px 0;
     }
     .name {
-        font-size: 20px;
-        font-weight: 700;
-        color: #0b3d91;
-        margin: 0 0 5px 0;
+        font-size: 18px;
     }
     .role {
-        font-size: 15px;
-        color: #555;
-        margin: 0 0 8px 0;
+        font-size: 14px;
     }
     .btn {
-        display: inline-block;
-        background: #0b3d91;
-        color: #fff;
-        text-decoration: none;
-        padding: 7px 14px;
-        border-radius: 12px;
         font-size: 14px;
-        transition: background 0.2s;
+        padding: 6px 12px;
     }
-    a.btn:hover {
-        background: #094080;
-    }
-
-    @media (max-width: 480px) {
-        header {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        header img {
-            margin: 0 0 10px 0;
-            width: 80px;
-            height: 80px;
-        }
-        header h1 {
-            font-size: 22px;
-        }
-        .staff-card {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px 15px;
-        }
-        .staff-card img {
-            width: 120px;
-            height: 120px;
-            margin: 0 0 15px 0;
-        }
-        .name {
-            font-size: 18px;
-        }
-        .role {
-            font-size: 14px;
-        }
-        .btn {
-            font-size: 14px;
-            padding: 6px 12px;
-        }
-    }
+}
 </style>
 </head>
 <body>
@@ -191,6 +204,6 @@
         <a class="btn" href="tel:045452836">โทร</a>
     </div>
 </div>
-    
+
 </body>
 </html>
