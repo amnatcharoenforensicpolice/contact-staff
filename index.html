@@ -12,11 +12,26 @@
         margin: 0;
         padding: 20px;
     }
-    h2 {
-        text-align: center;
-        color: #333;
-        font-size: 24px;
+
+    header {
+        display: flex;
+        align-items: center;
         margin-bottom: 20px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        object-fit: contain;
+    }
+
+    header h1 {
+        font-size: 26px;
+        color: #0b3d91;
+        margin: 0;
+        line-height: 1.2;
+        font-weight: 700;
     }
 
     .staff-card {
@@ -53,34 +68,44 @@
         min-width: 0;
     }
     .name {
-        font-size: 22px;
-        font-weight: 600;
-        color: #2196F3;
-        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #0b3d91;
+        margin: 0 0 5px 0;
     }
     .role {
-        font-size: 16px;
+        font-size: 15px;
         color: #555;
-        margin: 5px 0;
-        word-wrap: break-word;
+        margin: 0 0 8px 0;
     }
     .btn {
         display: inline-block;
-        background: #2196F3;
+        background: #0b3d91;
         color: #fff;
         text-decoration: none;
-        padding: 8px 12px;
-        border-radius: 10px;
-        margin-top: 8px;
-        font-size: 15px;
+        padding: 7px 14px;
+        border-radius: 12px;
+        font-size: 14px;
         transition: background 0.2s;
     }
     a.btn:hover {
-        background: #0c7cd5;
+        background: #094080;
     }
 
-    /* Media Query สำหรับมือถือ */
     @media (max-width: 480px) {
+        header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header img {
+            margin: 0 0 10px 0;
+            width: 80px;
+            height: 80px;
+        }
+        header h1 {
+            font-size: 22px;
+        }
         .staff-card {
             flex-direction: column;
             align-items: center;
@@ -93,7 +118,7 @@
             margin: 0 0 15px 0;
         }
         .name {
-            font-size: 20px;
+            font-size: 18px;
         }
         .role {
             font-size: 14px;
@@ -107,9 +132,12 @@
 </head>
 <body>
 
-<h2>เจ้าหน้าที่พิสูจน์หลักฐานจังหวัดอำนาจเจริญ</h2>
+<header>
+    <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/%E0%B8%9E%E0%B8%B4%E0%B8%AA%E0%B8%B9%E0%B8%88%E0%B8%99%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%88%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%20(3).png" alt="โลโก้ พฐ.อำนาจเจริญ">
+    <h1>เจ้าหน้าที่พิสูจน์หลักฐานจังหวัดอำนาจเจริญ</h1>
+</header>
 
-<!-- เจ้าหน้าที่ 1 -->
+<!-- ตัวอย่างเจ้าหน้าที่ -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/noi.jpg" alt="พ.ต.ท.หญิง อรอนงค์">
     <div class="staff-info">
@@ -119,7 +147,6 @@
     </div>
 </div>
 
-<!-- เจ้าหน้าที่ 2 -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/koy.jpg" alt="พ.ต.ท.หญิง วารี">
     <div class="staff-info">
@@ -129,7 +156,6 @@
     </div>
 </div>
 
-<!-- เจ้าหน้าที่ 3 -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/per.jpg" alt="ร.ต.อ.สมบูรณ์">
     <div class="staff-info">
@@ -139,7 +165,6 @@
     </div>
 </div>
 
-<!-- เจ้าหน้าที่ 4 -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/mos.jpg" alt="ร.ต.อ.อภิเดช">
     <div class="staff-info">
@@ -149,7 +174,6 @@
     </div>
 </div>
 
-<!-- เจ้าหน้าที่ 5 -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/pong.jpg"  alt="ว่าที่ ร.ต.อ.ธีรพงศ์">
     <div class="staff-info">
@@ -159,7 +183,6 @@
     </div>
 </div>
 
-<!-- ศปก. -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/%E0%B8%A3%E0%B8%B9%E0%B8%9B%20%E0%B8%A8%E0%B8%9B%E0%B8%81.jpg" alt="ศปก.">
     <div class="staff-info">
