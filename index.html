@@ -16,14 +16,15 @@ body {
 /* Header */
 header {
     display: flex;
-    align-items: center; /* อยู่ระดับเดียวกัน */
+    align-items: center; /* โลโก้และหัวข้ออยู่ระดับเดียวกัน */
+    justify-content: flex-start; /* อยู่ทางซ้าย */
     margin-bottom: 25px;
 }
 
 header img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain; /* โลโก้ไม่ถูกตัด */
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     margin-right: 15px;
 }
 
@@ -56,13 +57,13 @@ header h1 {
 
 /* รูปเจ้าหน้าที่ */
 .staff-card img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    object-fit: cover; /* ครอบเต็มวงกลม */
-    padding: 5px;
+    object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin-right: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -108,17 +109,17 @@ a.btn:hover {
 /* Media Query สำหรับมือถือ */
 @media (max-width: 480px) {
     header {
-        flex-direction: column;
+        flex-direction: row; /* ให้โลโก้และหัวข้ออยู่ข้างกัน */
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
     header img {
-        margin: 0 0 10px 0;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
     }
     header h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .staff-card {
@@ -128,8 +129,8 @@ a.btn:hover {
         padding: 20px 15px;
     }
     .staff-card img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         margin: 0 0 15px 0;
     }
     .name {
@@ -140,7 +141,7 @@ a.btn:hover {
     }
     .btn {
         font-size: 14px;
-        padding: 7px 14px;
+        padding: 6px 12px;
     }
 }
 </style>
@@ -152,7 +153,6 @@ a.btn:hover {
     <h1>เจ้าหน้าที่พิสูจน์หลักฐานจังหวัดอำนาจเจริญ</h1>
 </header>
 
-<!-- ตัวอย่างเจ้าหน้าที่ -->
 <div class="staff-card">
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/noi.jpg" alt="พ.ต.ท.หญิง อรอนงค์">
     <div class="staff-info">
