@@ -19,25 +19,27 @@ header {
     align-items: center;          /* โลโก้และหัวข้ออยู่แนวนอนเดียวกัน */
     justify-content: center;      /* อยู่กลางหน้าจอ */
     margin-bottom: 25px;
+    flex-wrap: wrap;              /* เพื่อให้มือถือสามารถขึ้นบรรทัดใหม่ */
 }
 
 header img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     margin-right: 15px;
 }
 
 header h1 {
-    font-size: 26px;
+    font-size: 26px;  /* Desktop ขนาดใหญ่ */
     color: #0b3d91;
     margin: 0;
     line-height: 1.2;
     font-weight: 700;
+    text-align: center;
 }
 
 header h1 .mobile-break {
-    display: inline; /* ปกติ Desktop ให้บรรทัดเดียว */
+    display: inline;  /* Desktop: ติดกัน */
 }
 
 /* การ์ดเจ้าหน้าที่ */
@@ -51,22 +53,14 @@ header h1 .mobile-break {
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.staff-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-}
-
-/* รูปเจ้าหน้าที่ */
 .staff-card img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     margin-right: 20px;
 }
 
@@ -102,10 +96,13 @@ a.btn:hover {
     background: #094080;
 }
 
-/* Media Query สำหรับมือถือ */
+/* Media Query มือถือ */
 @media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;  /* ลดขนาดให้พอดีมือถือ */
+    }
     header h1 .mobile-break {
-        display: block; /* ขึ้นบรรทัดใหม่เฉพาะมือถือ */
+        display: block;  /* ขึ้นบรรทัดสองบนมือถือ */
     }
 
     .staff-card {
@@ -136,7 +133,7 @@ a.btn:hover {
 
 <header>
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/%E0%B8%9E%E0%B8%B4%E0%B8%AA%E0%B8%B9%E0%B8%88%E0%B8%99%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%88%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%20(3).png" alt="โลโก้ พฐ.อำนาจเจริญ">
-    <h1>เจ้าหน้าที่พิสูจน์หลักฐาน <span class="mobile-break">จังหวัดอำนาจเจริญ</span></h1>
+    <h1>เจ้าหน้าที่พิสูจน์หลักฐาน<span class="mobile-break">จังหวัดอำนาจเจริญ</span></h1>
 </header>
 
 <div class="staff-card">
