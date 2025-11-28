@@ -36,6 +36,10 @@ header h1 {
     font-weight: 700;
 }
 
+header h1 .mobile-break {
+    display: inline; /* ปกติ Desktop ให้บรรทัดเดียว */
+}
+
 /* การ์ดเจ้าหน้าที่ */
 .staff-card {
     background: #fff;
@@ -122,6 +126,9 @@ a.btn:hover {
         font-size: 20px;
         line-height: 1.2;
     }
+    header h1 .mobile-break {
+        display: block; /* ขึ้นบรรทัดใหม่เฉพาะมือถือ */
+    }
 
     .staff-card {
         flex-direction: column;
@@ -151,7 +158,7 @@ a.btn:hover {
 
 <header>
     <img src="https://raw.githubusercontent.com/amnatcharoenforensicpolice/image/main/%E0%B8%9E%E0%B8%B4%E0%B8%AA%E0%B8%B9%E0%B8%88%E0%B8%99%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%88%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%20(3).png" alt="โลโก้ พฐ.อำนาจเจริญ">
-    <h1>เจ้าหน้าที่พิสูจน์หลักฐานจังหวัดอำนาจเจริญ</h1>
+    <h1>เจ้าหน้าที่พิสูจน์หลักฐาน <span class="mobile-break">จังหวัดอำนาจเจริญ</span></h1>
 </header>
 
 <div class="staff-card">
