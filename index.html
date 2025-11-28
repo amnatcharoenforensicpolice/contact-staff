@@ -13,11 +13,11 @@ body {
     padding: 20px;
 }
 
-/* Header */
+/* Header Desktop */
 header {
     display: flex;
-    align-items: center; /* โลโก้และหัวข้ออยู่ระดับเดียวกัน */
-    justify-content: flex-start; /* อยู่ทางซ้าย */
+    align-items: center;          /* โลโก้และหัวข้ออยู่ระดับเดียวกัน */
+    justify-content: center;      /* อยู่กลางหน้าจอ */
     margin-bottom: 25px;
 }
 
@@ -109,9 +109,9 @@ a.btn:hover {
 /* Media Query สำหรับมือถือ */
 @media (max-width: 480px) {
     header {
-        flex-direction: row; /* ให้โลโก้และหัวข้ออยู่ข้างกัน */
-        align-items: center;
-        text-align: left;
+        justify-content: flex-start; /* โลโก้อยู่ซ้ายสุด */
+        width: 100%;
+        padding: 0 10px;
     }
     header img {
         width: 60px;
@@ -120,6 +120,7 @@ a.btn:hover {
     }
     header h1 {
         font-size: 20px;
+        line-height: 1.2;
     }
 
     .staff-card {
